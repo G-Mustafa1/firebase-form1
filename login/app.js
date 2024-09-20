@@ -42,11 +42,16 @@ btn.addEventListener('click', ()=> {
        });
     }
     else{
-      if(select === "Admin"){
-         window.location.href = `../studentMarks/index.html`;
+     if(select === "Admin"){
+        await setTimeout(()=>{
+          window.location.href = `../studentMarks/index.html?uid=${user.uid}`;
+          
+        },3000)
       }
       else if(select === "Student"){
-         window.location.href = "../studentPortal/index.html";
+        await setTimeout(()=>{
+          window.location.href = "../studentPortal/index.html";
+        },3000)
       }
     }
   })
