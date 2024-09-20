@@ -81,7 +81,7 @@ btn.addEventListener('click', async () => {
       //    text: "User created successfully",
       //    icon: "success"
       // });
-      // window.location.href = "/pages/studentMarks/index.html";
+      // window.location.href = "login/index.html";
    }catch (error){
       btn.disabled = false;
       btn.innerText = "Add Student"
