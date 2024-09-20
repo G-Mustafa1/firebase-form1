@@ -36,7 +36,10 @@ const signOutButton = document.getElementById("sign-out");
             text: "User signed out successfully.",
             icon: "success"
          });
-      window.location.href = "../login/index.html";     
+         await setTimeout(()=>{
+           window.location.href = "../login/index.html";     
+           
+         },3000)     
    }catch (error) {
       const errorMessage = error.message;
       Swal.fire({
