@@ -37,18 +37,18 @@ btn.addEventListener('click', ()=> {
       btn.style.backgroundColor = "#0051ff"
       Swal.fire({
          title: "error",
-         text: "hh",
+         text: "Please fill out this",
          icon: "error"
        });
     }
     else{
-     if(select === "Admin"){
-          window.location.href = `../studentMarks/index.html`;          
+          if(select === "Admin"){
+              window.location.href = `../studentMarks/index.html`;
+          }
+          else if(select === "Student"){
+              window.location.href = "../studentPortal/index.html";
+          }
       }
-      else if(select === "Student"){
-          window.location.href = "../studentPortal/index.html";
-      }
-    }
   })
   .catch((error) => {
     const errorCode = error.code;
