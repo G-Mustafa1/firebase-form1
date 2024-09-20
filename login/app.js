@@ -15,7 +15,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const btn = document.getElementById('btn');
-btn.addEventListener('click', async ()=> {
+btn.addEventListener('click', ()=> {
    btn.disabled = true;
    btn.innerText = "Loadind..."
    btn.style.backgroundColor = "#0033a0"
@@ -43,15 +43,10 @@ btn.addEventListener('click', async ()=> {
     }
     else{
      if(select === "Admin"){
-        await setTimeout(()=>{
-          window.location.href = `../studentMarks/index.html?uid=${user.uid}`;
-          
-        },3000)
+          window.location.href = `../studentMarks/index.html?uid=${user.uid}`;          
       }
       else if(select === "Student"){
-        await setTimeout(()=>{
           window.location.href = "../studentPortal/index.html";
-        },3000)
       }
     }
   })
